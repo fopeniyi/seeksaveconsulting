@@ -256,7 +256,7 @@ footer p { margin-bottom: 0.75rem; }
 
 .split-image img {
   width: 100%;
-  height: 320px;
+  height: 350px;
   object-fit: cover;
   border-radius: 8px;
   border: 1px solid var(--border);
@@ -333,7 +333,7 @@ footer p { margin-bottom: 0.75rem; }
 
 .full-screen-section .split-image img {
   width: 100%;
-  height: 250px;
+  height: 300px;
   object-fit: cover;
   border-radius: 6px;
   border: 1px solid var(--border);
@@ -384,7 +384,7 @@ footer p { margin-bottom: 0.75rem; }
 
 .full-screen-container-single .image img {
   width: 100%;
-  height: 250px; /* Adjust this number to make it shorter or taller */
+  height: 300px; /* Adjust this number to make it shorter or taller */
   object-fit: cover;
   border-radius: 6px;
   border: 1px solid var(--border);
