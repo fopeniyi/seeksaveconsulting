@@ -206,3 +206,36 @@ footer p { margin-bottom: 0.75rem; }
   .hero, .row-grid, .band-grid, .contact-grid, .property-grid { grid-template-columns: 1fr; gap: 2rem; }
   .hero h1 { font-size: 2.25rem; }
 }
+
+/* Centered Approach Section Styling */
+.centered-section {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.section-eyebrow {
+  color: var(--muted);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.75rem;
+}
+
+.centered-section h2 {
+  font-size: 2.25rem;
+  font-family: 'Spectral', serif;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+
+.centered-section .row-grid {
+  display: block; /* Overrides the 3-column grid for this specific section */
+  margin-top: 0;
+}
+
+.centered-section .row p {
+  color: var(--muted);
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
