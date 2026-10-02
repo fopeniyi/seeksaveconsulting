@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Contact — Marlowe Hart Capital</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;600&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+<header>
+<a class="logo" href="index.html">Marlowe Hart Capital</a>
+<nav aria-label="Main">
+  <a href="index.html">Home</a>
+  <a href="approach.html">Approach</a>
+  <a href="strategies.html">Strategies</a>
+  <a href="contact.html" class="active">Contact</a>
+</nav>
+</header>
+
+<main>
+<div class="contact-grid">
+<div>
+<h2>Talk with a partner, not a sales team.</h2>
+<p style="color: var(--muted); margin-top: 1rem;">Tell us a little about your situation. A partner will reply within one business day to set up a 30-minute call.</p>
+</div>
+<div>
+<div id="f">
+<label for="n">Full name</label><input id="n" autocomplete="name">
+<label for="e">Email</label><input id="e" type="email" autocomplete="email">
+<label for="m">What would you like to discuss?</label><textarea id="m"></textarea>
+<button class="btn" type="button" onclick="send()">Send message</button>
+<div id="sent" role="status">Message sent. We will reply within one business day.</div>
+</div>
+</div>
+</div>
+</main>
+
+<footer>
+<p>&copy; 2026 Marlowe Hart Capital</p>
+</footer>
+</div>
+
+<script>
+function send(){
+  var e=document.getElementById('e').value.trim();
+  if(!e||e.indexOf('@')<1){document.getElementById('e').focus();return}
+  document.getElementById('sent').style.display='block';
+}
+</script>
+</body>
+</html>
