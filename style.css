@@ -1,10 +1,9 @@
 :root {
-  --bg: #0c0c0e;
-  --surface: #141417;
-  --text: #ededed;
-  --muted: #a1a1aa;
-  --accent: #d4af37; /* Warm gold touch or keep it monochrome */
-  --border: #27272a;
+  --bg: #f5f3ef;         /* The warm cream background from your image */
+  --surface: #ffffff;    /* Card and input background (pure white for contrast) */
+  --text: #1c1c1e;       /* Deep dark charcoal for crisp readability */
+  --muted: #6b6b70;      /* Muted gray for subtext and descriptions */
+  --border: #e2ded4;     /* Soft warm border color */
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -20,6 +19,7 @@ body {
 h1, h2, h3, .logo {
   font-family: 'Spectral', serif;
   font-weight: 400;
+  color: var(--text);
 }
 
 .wrap {
@@ -93,7 +93,7 @@ main, section {
 
 .btn:hover { opacity: 0.85; }
 
-/* SVG Chart styles */
+/* SVG Chart styles for light background */
 .chart { width: 100%; height: auto; }
 .grid { stroke: var(--border); stroke-dasharray: 4; }
 .base { fill: none; stroke: var(--muted); stroke-width: 2; }
@@ -119,7 +119,7 @@ main, section {
   text-align: center;
   margin-top: 2rem;
 }
-.band-grid b { display: block; font-size: 2.5rem; font-family: 'Spectral', serif; font-weight: normal; }
+.band-grid b { display: block; font-size: 2.5rem; font-family: 'Spectral', serif; font-weight: normal; color: var(--text); }
 .band-grid span { color: var(--muted); font-size: 0.9rem; }
 
 /* Contact form */
@@ -143,7 +143,7 @@ input, textarea {
 input:focus, textarea:focus { outline: 1px solid var(--text); }
 textarea { height: 120px; resize: vertical; }
 
-#sent { display: none; margin-top: 1rem; color: #4ade80; font-size: 0.9rem; }
+#sent { display: none; margin-top: 1rem; color: #15803d; font-size: 0.9rem; }
 
 footer {
   padding: 3rem 0;
@@ -152,12 +152,7 @@ footer {
 }
 footer p { margin-bottom: 0.75rem; }
 
-@media(max-width: 768px) {
-  .hero, .row-grid, .band-grid, .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
-  .hero h1 { font-size: 2.25rem; }
-}
-
-/* Additions for Real Estate Page Layout */
+/* Real Estate Page Additions */
 .real-estate-intro {
   color: var(--muted);
   font-size: 1.05rem;
@@ -182,7 +177,7 @@ footer p { margin-bottom: 0.75rem; }
   content: "✔";
   position: absolute;
   left: 0;
-  color: #ef4444; /* Red checkmark matching your image */
+  color: #dc2626;
   font-weight: bold;
 }
 
@@ -208,7 +203,6 @@ footer p { margin-bottom: 0.75rem; }
 }
 
 @media(max-width: 768px) {
-  .property-grid {
-    grid-template-columns: 1fr;
-  }
+  .hero, .row-grid, .band-grid, .contact-grid, .property-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .hero h1 { font-size: 2.25rem; }
 }
