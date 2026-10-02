@@ -239,3 +239,61 @@ footer p { margin-bottom: 0.75rem; }
   font-size: 1.1rem;
   line-height: 1.7;
 }
+
+
+/* Split Section - Forced Side-by-Side with Image First */
+.split-section {
+  padding: 4rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.split-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Image column (left) | Content column (right) */
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.split-image img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.split-content h2 {
+  font-size: 1.8rem;
+  font-family: 'Spectral', serif;
+  font-weight: 400;
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+}
+
+.split-content p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.split-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  border-top: 1px solid var(--border);
+  padding-top: 1.25rem;
+}
+
+.split-stats h3 {
+  font-size: 1.3rem;
+  font-family: 'Spectral', serif;
+  color: var(--text);
+  margin-bottom: 0.15rem;
+}
+
+.split-stats p {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-bottom: 0;
+}
