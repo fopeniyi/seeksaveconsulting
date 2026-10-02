@@ -297,3 +297,12 @@ footer p { margin-bottom: 0.75rem; }
   color: var(--muted);
   margin-bottom: 0;
 }
+
+/* Custom Darker Cream Background Section */
+.highlight-section {
+  background-color: #e8e4db; /* A slightly deeper, rich variant of your cream theme */
+  padding: 4rem 2rem;
+  border-radius: 8px;
+  margin: 2rem 0;
+  border: 1px solid var(--border);
+}
