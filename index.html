@@ -12,18 +12,23 @@
 <body>
 <div class="wrap">
 <header>
-<a class="logo" href="#top">Marlowe Hart Capital</a>
-<nav aria-label="Main"><a href="#approach">Approach</a><a href="#strategies">Strategies</a><a href="#contact">Contact</a></nav>
+<a class="logo" href="index.html">Marlowe Hart Capital</a>
+<nav aria-label="Main">
+  <a href="index.html" class="active">Home</a>
+  <a href="approach.html">Approach</a>
+  <a href="strategies.html">Strategies</a>
+  <a href="contact.html">Contact</a>
+</nav>
 </header>
 
-<main id="top">
+<main>
 <div class="hero">
 <div>
 <h1>Patient capital for families and foundations.</h1>
 <p>We invest for decades, not quarters. Our clients hold a small number of well-understood businesses, and we report on every one in plain language.</p>
-<a class="btn" href="#contact">Book an introductory call</a>
+<a class="btn" href="contact.html">Book an introductory call</a>
 </div>
-<svg class="chart" viewBox="0 0 480 360" role="img" aria-label="Illustration of a portfolio growing faster than inflation over twenty years">
+<svg class="chart" viewBox="0 0 480 360" role="img" aria-label="Illustration of a portfolio growing">
 <line class="grid" x1="40" y1="40" x2="460" y2="40"/><line class="grid" x1="40" y1="130" x2="460" y2="130"/><line class="grid" x1="40" y1="220" x2="460" y2="220"/><line class="grid" x1="40" y1="310" x2="460" y2="310"/>
 <path class="base" d="M40 300 C160 285 300 260 460 225"/>
 <path class="gain" d="M40 300 C120 290 180 270 240 230 S360 120 460 50"/>
@@ -32,59 +37,11 @@
 </svg>
 </div>
 </main>
-</div>
 
-<section id="approach"><div class="wrap">
-<h2>Three rules we do not break.</h2>
-<div class="row"><h3>Own what we understand</h3><p>We hold 15 to 25 companies. If we cannot explain how a business makes money in two sentences, we do not buy it.</p></div>
-<div class="row"><h3>Keep costs visible</h3><p>One flat annual fee, shown in dollars on every statement. We earn nothing from the products we select.</p></div>
-<div class="row"><h3>Think in decades</h3><p>Turnover is low by design. Most holdings stay for seven years or more, so taxes and trading costs stay low too.</p></div>
-</div></section>
-
-<section id="strategies"><div class="wrap">
-<h2>Choose the mandate that fits your goals.</h2>
-<div class="row"><h3>Long-term growth</h3><p>Concentrated public equities for investors with a horizon of ten years or more.</p></div>
-<div class="row"><h3>Income and preservation</h3><p>Investment-grade bonds and dividend payers, built to fund regular withdrawals.</p></div>
-<div class="row"><h3>Private opportunities</h3><p>Selected co-investments in private companies, offered to qualified investors in limited amounts.</p></div>
-</div></section>
-
-<section class="band"><div class="wrap">
-<h2>Where we stand today.</h2>
-<div class="facts">
-<div><b>$2.4B</b><span>Assets under management</span></div>
-<div><b>18 years</b><span>Average client relationship</span></div>
-<div><b>0.65%</b><span>Flat annual fee, all-in</span></div>
-</div>
-</div></section>
-
-<section id="contact"><div class="wrap contact">
-<div>
-<h2>Talk with a partner, not a sales team.</h2>
-<p>Tell us a little about your situation. A partner will reply within one business day to set up a 30-minute call.</p>
-</div>
-<div>
-<div id="f">
-<label for="n">Full name</label><input id="n" autocomplete="name">
-<label for="e">Email</label><input id="e" type="email" autocomplete="email">
-<label for="m">What would you like to discuss?</label><textarea id="m"></textarea>
-<button class="btn" type="button" onclick="send()">Send message</button>
-<div id="sent" role="status">Message sent. We will reply within one business day.</div>
-</div>
-</div>
-</div></section>
-
-<footer><div class="wrap">
-<p>Marlowe Hart Capital is a placeholder name. Replace it with your firm's details.</p>
-<p>Investing involves risk, including loss of principal. Past performance does not guarantee future results. Nothing on this site is an offer to sell or a solicitation to buy any security.</p>
+<footer>
+<p>Investing involves risk, including loss of principal. Past performance does not guarantee future results.</p>
 <p>&copy; 2026 Marlowe Hart Capital</p>
-</div></footer>
-
-<script>
-function send(){
-  var e=document.getElementById('e').value.trim();
-  if(!e||e.indexOf('@')<1){document.getElementById('e').focus();return}
-  document.getElementById('sent').style.display='block';
-}
-</script>
+</footer>
+</div>
 </body>
 </html>
