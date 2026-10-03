@@ -377,13 +377,13 @@ footer p { margin-bottom: 0.75rem; }
 
 /* Single Image Full-Screen Section Styling */
 .full-screen-container-single {
-  max-width: 1100px;
+  max-width: 1150px;
   margin: 0 auto;
   padding: 0 2rem;
 }
 
 .full-screen-container-single .image img {
-  width: 100%;
+  width: 150%;
   height: 310px; /* Adjust this number to make it shorter or taller */
   object-fit: contain;
   border-radius: 6px;
