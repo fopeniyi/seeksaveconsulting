@@ -389,3 +389,68 @@ footer p { margin-bottom: 0.75rem; }
   border-radius: 6px;
   border: 1px solid var(--border);
 }
+
+/* Full-Screen Edge-to-Edge Container */
+.full-screen-section {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background-color: #e8e4db; /* Darker cream background */
+  padding: 5rem 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.full-screen-container {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1.4fr; /* Image on left, wider service grid on right */
+  gap: 3.5rem;
+  align-items: center;
+}
+
+/* Image styling ensuring it displays fully without top clipping */
+.full-screen-section .split-image img {
+  width: 100%;
+  height: auto;
+  max-height: 600px;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+/* Content typography */
+.full-screen-section .split-content h2 {
+  font-size: 2rem;
+  font-family: 'Spectral', serif;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+/* 6-Item Grid for Services */
+.full-screen-section .service-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 columns of services */
+  gap: 1.5rem;
+  border-top: 1px solid var(--border);
+  padding-top: 1.5rem;
+}
+
+.full-screen-section .service-grid h3 {
+  font-size: 1.05rem;
+  font-family: 'Spectral', serif;
+  color: var(--text);
+  margin-bottom: 0.25rem;
+}
+
+.full-screen-section .service-grid p {
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1.5;
+  margin-bottom: 0;
+}
