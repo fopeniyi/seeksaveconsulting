@@ -257,7 +257,7 @@ footer p { margin-bottom: 0.75rem; }
 .split-image img {
   width: 100%;
   height: 350px;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 8px;
   border: 1px solid var(--border);
 }
@@ -332,9 +332,9 @@ footer p { margin-bottom: 0.75rem; }
 }
 
 .full-screen-section .split-image img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
+  width: 150%;
+  height: 400px;
+  object-fit: contain;
   border-radius: 6px;
   border: 1px solid var(--border);
 }
