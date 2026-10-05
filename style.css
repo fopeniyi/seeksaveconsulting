@@ -548,14 +548,15 @@ footer p { margin-bottom: 0.75rem; }
   }
 }
 
-.why-choose-section.carousel-theme {
+/* --- SECTION 1: Why Clients Choose SeekSave (Inverted Cream Theme) --- */
+.why-choose-section.inverted-cream-theme {
   width: 100vw;
   position: relative;
   left: 50%;
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
-  background-color: #e8e4db; /* Darker cream theme */
+  background-color: #f5f3ef; /* Section background is now light cream */
   color: var(--text);
   padding: 6rem 2rem;
   border-top: 1px solid var(--border);
@@ -598,7 +599,7 @@ footer p { margin-bottom: 0.75rem; }
 }
 
 .carousel-btn {
-  background-color: #f5f3ef;
+  background-color: #e8e4db; /* Matches the inverted card color */
   border: 1px solid var(--border);
   color: var(--text);
   width: 45px;
@@ -632,38 +633,29 @@ footer p { margin-bottom: 0.75rem; }
 
 .reason-card {
   min-width: 320px;
-  flex: 0 0 calc(33.333% - 1rem); /* Shows 3 cards at a time on desktop */
-  background-color: #f5f3ef; /* Light cream card background */
+  flex: 0 0 calc(33.333% - 1rem);
+  background-color: #e8e4db; /* Cards are now the darker cream color */
   border: 1px solid var(--border);
   border-radius: 8px;
   padding: 2.5rem 2rem;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  text-decoration: none; /* Removes anchor underline */
+  text-decoration: none;
   color: inherit;
   transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .reason-card:hover {
   transform: translateY(-4px);
-  border-color: #c5a059; /* Highlights border with gold accent on hover */
+  border-color: #c5a059;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-}
-
-.card-link-text {
-  display: inline-block;
-  margin-top: 1.5rem;
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: #c5a059;
-  transition: gap 0.2s ease;
 }
 
 .reason-badge {
   width: 40px;
   height: 40px;
-  background-color: #c5a059; /* Warm gold accent */
+  background-color: #c5a059;
   color: #ffffff;
   font-weight: bold;
   border-radius: 50%;
@@ -686,6 +678,14 @@ footer p { margin-bottom: 0.75rem; }
   color: var(--muted);
   line-height: 1.5;
   margin: 0;
+}
+
+.card-link-text {
+  display: inline-block;
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #c5a059;
 }
 
 /* Responsive adjustments */
