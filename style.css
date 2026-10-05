@@ -705,3 +705,93 @@ footer p { margin-bottom: 0.75rem; }
     gap: 1.5rem;
   }
 }
+
+/* --- Call to Action Section Styling --- */
+.cta-section.navy-theme {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background-color: #0f172a; /* Deep Institutional Navy */
+  color: #ffffff;
+  padding: 6rem 2rem;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.cta-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.cta-section h2 {
+  font-family: 'Spectral', serif;
+  font-size: 2.75rem;
+  font-weight: 400;
+  line-height: 1.25;
+  margin-bottom: 2.5rem;
+  color: #ffffff;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  background-color: #1e293b; /* Slightly lighter navy for button background */
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 1rem 1.75rem;
+  border-radius: 50px; /* Fully rounded pill shape */
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+.cta-btn .btn-arrow {
+  width: 32px;
+  height: 32px;
+  background-color: #f5f3ef; /* Cream accent circle for the arrow */
+  color: #0f172a;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.cta-btn:hover {
+  border-color: #c5a059; /* Warm gold/bronze border on hover */
+  transform: translateY(-2px);
+}
+
+.cta-btn:hover .btn-arrow {
+  background-color: #c5a059; /* Turns gold on hover */
+  color: #ffffff;
+  transform: translateX(3px);
+}
+
+/* Responsive adjustments for smaller screens */
+@media(max-width: 650px) {
+  .cta-section h2 {
+    font-size: 2rem;
+  }
+  .cta-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .cta-btn {
+    justify-content: space-between;
+  }
+}
