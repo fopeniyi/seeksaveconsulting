@@ -548,19 +548,19 @@ footer p { margin-bottom: 0.75rem; }
   }
 }
 
-/* --- SECTION 1: Why Clients Choose SeekSave (Darker Cream Theme) --- */
-.why-choose-section.cream-theme {
+.why-choose-section.carousel-theme {
   width: 100vw;
   position: relative;
   left: 50%;
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
-  background-color: #e8e4db; /* Darker cream background */
+  background-color: #e8e4db; /* Darker cream theme */
   color: var(--text);
-  padding: 5rem 2rem;
+  padding: 6rem 2rem;
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
+  overflow: hidden;
 }
 
 .why-container {
@@ -569,8 +569,10 @@ footer p { margin-bottom: 0.75rem; }
 }
 
 .why-header {
-  text-align: center;
-  margin-bottom: 3.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 3rem;
 }
 
 .why-title {
@@ -586,27 +588,64 @@ footer p { margin-bottom: 0.75rem; }
   font-size: 0.95rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  margin: 0;
 }
 
-.why-choose-section.cream-theme .reasons-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+/* Navigation Buttons */
+.carousel-nav {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.carousel-btn {
+  background-color: #f5f3ef;
+  border: 1px solid var(--border);
+  color: var(--text);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.carousel-btn:hover {
+  background-color: #c5a059;
+  color: #ffffff;
+  border-color: #c5a059;
+}
+
+/* Viewport & Track for Sliding */
+.carousel-viewport {
+  width: 100%;
+  overflow: hidden;
+}
+
+.reasons-carousel-track {
+  display: flex;
   gap: 1.5rem;
+  transition: transform 0.4s ease-in-out;
 }
 
-.why-choose-section.cream-theme .reason-card {
+.reason-card {
+  min-width: 320px;
+  flex: 0 0 calc(33.333% - 1rem); /* Shows 3 cards at a time on desktop */
   background-color: #f5f3ef; /* Light cream card background */
   border: 1px solid var(--border);
   border-radius: 8px;
-  padding: 2rem 1.5rem;
+  padding: 2.5rem 2rem;
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
 }
 
-.why-choose-section.cream-theme .reason-badge {
+.reason-badge {
   width: 40px;
   height: 40px;
-  background-color: #c5a059; /* Warm gold/bronze accent */
+  background-color: #c5a059; /* Warm gold accent */
   color: #ffffff;
   font-weight: bold;
   border-radius: 50%;
@@ -617,16 +656,34 @@ footer p { margin-bottom: 0.75rem; }
   font-size: 1.1rem;
 }
 
-.why-choose-section.cream-theme .reason-card h3 {
+.reason-card h3 {
   font-family: 'Spectral', serif;
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   margin-bottom: 0.75rem;
   color: var(--text);
 }
 
-.why-choose-section.cream-theme .reason-card p {
-  font-size: 0.85rem;
+.reason-card p {
+  font-size: 0.9rem;
   color: var(--muted);
   line-height: 1.5;
   margin: 0;
+}
+
+/* Responsive adjustments */
+@media(max-width: 1024px) {
+  .reason-card {
+    flex: 0 0 calc(50% - 0.75rem); /* Shows 2 cards on tablet */
+  }
+}
+
+@media(max-width: 650px) {
+  .reason-card {
+    flex: 0 0 100%; /* Shows 1 card on mobile */
+  }
+  .why-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
 }
