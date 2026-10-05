@@ -707,14 +707,14 @@ footer p { margin-bottom: 0.75rem; }
 }
 
 /* --- Call to Action Section Styling --- */
-.cta-section.navy-theme {
+.cta-section {
   width: 100vw;
   position: relative;
   left: 50%;
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
-  background-color: #0f172a; /* Deep Institutional Navy */
+  background-color: #0f172a; /* Exact Deep Navy requested */
   color: #ffffff;
   padding: 6rem 2rem;
   text-align: center;
@@ -722,7 +722,7 @@ footer p { margin-bottom: 0.75rem; }
 }
 
 .cta-container {
-  max-width: 900px;
+  max-width: 950px;
   margin: 0 auto;
 }
 
@@ -747,7 +747,7 @@ footer p { margin-bottom: 0.75rem; }
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
-  background-color: #1e293b; /* Slightly lighter navy for button background */
+  background-color: #1e293b; /* Subtle contrast layer for the button background */
   color: #ffffff;
   border: 1px solid rgba(255, 255, 255, 0.15);
   padding: 1rem 1.75rem;
@@ -761,7 +761,7 @@ footer p { margin-bottom: 0.75rem; }
 .cta-btn .btn-arrow {
   width: 32px;
   height: 32px;
-  background-color: #f5f3ef; /* Cream accent circle for the arrow */
+  background-color: #f5f3ef; /* Warm cream accent circle */
   color: #0f172a;
   border-radius: 50%;
   display: flex;
@@ -772,7 +772,7 @@ footer p { margin-bottom: 0.75rem; }
 }
 
 .cta-btn:hover {
-  border-color: #c5a059; /* Warm gold/bronze border on hover */
+  border-color: #c5a059; /* Editorial gold/bronze border on hover */
   transform: translateY(-2px);
 }
 
@@ -782,7 +782,7 @@ footer p { margin-bottom: 0.75rem; }
   transform: translateX(3px);
 }
 
-/* Responsive adjustments for smaller screens */
+/* Responsive adjustments */
 @media(max-width: 650px) {
   .cta-section h2 {
     font-size: 2rem;
