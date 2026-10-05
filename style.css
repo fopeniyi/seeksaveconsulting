@@ -547,3 +547,86 @@ footer p { margin-bottom: 0.75rem; }
     grid-template-columns: 1fr;
   }
 }
+
+/* --- SECTION 1: Why Clients Choose SeekSave (Darker Cream Theme) --- */
+.why-choose-section.cream-theme {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background-color: #e8e4db; /* Darker cream background */
+  color: var(--text);
+  padding: 5rem 2rem;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.why-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.why-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.why-title {
+  font-family: 'Spectral', serif;
+  font-size: 2.25rem;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+}
+
+.why-subtitle {
+  color: var(--muted);
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.why-choose-section.cream-theme .reasons-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+}
+
+.why-choose-section.cream-theme .reason-card {
+  background-color: #f5f3ef; /* Light cream card background */
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.why-choose-section.cream-theme .reason-badge {
+  width: 40px;
+  height: 40px;
+  background-color: #c5a059; /* Warm gold/bronze accent */
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  font-size: 1.1rem;
+}
+
+.why-choose-section.cream-theme .reason-card h3 {
+  font-family: 'Spectral', serif;
+  font-size: 1.15rem;
+  margin-bottom: 0.75rem;
+  color: var(--text);
+}
+
+.why-choose-section.cream-theme .reason-card p {
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1.5;
+  margin: 0;
+}
