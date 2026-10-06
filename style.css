@@ -797,6 +797,8 @@ footer p { margin-bottom: 0.75rem; }
 }
 
 /* --- Footer Styling --- */
+/* --- Footer Layout Locked for All Screen Sizes --- */
+
 .site-footer {
   width: 100vw;
   position: relative;
@@ -816,7 +818,7 @@ footer p { margin-bottom: 0.75rem; }
   margin: 0 auto;
 }
 
-/* Floating Newsletter Card Overlap */
+/* Floating Newsletter Card */
 .newsletter-card-wrapper {
   max-width: 1200px;
   margin: 0 auto 4rem auto;
@@ -842,7 +844,7 @@ footer p { margin-bottom: 0.75rem; }
 
 .envelope-icon {
   font-size: 2rem;
-  color: #f97316; /* Orange accent */
+  color: #f97316;
   background-color: #fff7ed;
   width: 55px;
   height: 55px;
@@ -885,7 +887,7 @@ footer p { margin-bottom: 0.75rem; }
 }
 
 .subscribe-btn {
-  background-color: #ea580c; /* Orange accent button */
+  background-color: #ea580c;
   color: #ffffff;
   border: none;
   border-radius: 50px;
@@ -900,11 +902,7 @@ footer p { margin-bottom: 0.75rem; }
   transition: background-color 0.2s ease;
 }
 
-.subscribe-btn:hover {
-  background-color: #c2410c;
-}
-
-/* Footer Top Row: Logo & YouTube */
+/* Footer Top Row */
 .footer-top-row {
   display: flex;
   justify-content: space-between;
@@ -951,11 +949,6 @@ footer p { margin-bottom: 0.75rem; }
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 0.2s ease;
-}
-
-.social-icon:hover {
-  background-color: #ea580c;
 }
 
 .footer-divider {
@@ -964,7 +957,7 @@ footer p { margin-bottom: 0.75rem; }
   margin-bottom: 3rem;
 }
 
-/* Footer Columns Grid */
+/* --- LOCKED 3-COLUMN GRID (Never stacks into single column) --- */
 .footer-grid {
   display: grid;
   grid-template-columns: 1fr 1.5fr 1.2fr;
@@ -985,6 +978,7 @@ footer p { margin-bottom: 0.75rem; }
   margin: 0;
 }
 
+/* --- LOCKED SIDE-BY-SIDE QUICK LINKS SUB-GRID --- */
 .links-subgrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1042,12 +1036,9 @@ footer p { margin-bottom: 0.75rem; }
   font-size: 0.85rem;
 }
 
-/* Responsive Adjustments */
-@media(max-width: 1024px) {
-  .footer-grid {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
+/* Only stack the newsletter card on small mobile screens if needed, 
+   while keeping the footer layout fully intact as requested */
+@media(max-width: 900px) {
   .newsletter-card {
     flex-direction: column;
     gap: 1.5rem;
@@ -1057,12 +1048,5 @@ footer p { margin-bottom: 0.75rem; }
   .newsletter-form {
     width: 100%;
     box-sizing: border-box;
-  }
-}
-
-@media(max-width: 600px) {
-  .links-subgrid {
-    grid-template-columns: 1fr;
-    gap: 0;
   }
 }
