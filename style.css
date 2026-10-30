@@ -851,3 +851,32 @@ header nav a.active {
     justify-content: space-between;
   }
 }
+
+
+/* ==========================================================================
+   10. Why Choose Us
+   ========================================================================== */
+
+
+/* --- Hero Block with Background Image --- */
+.page-hero-section {
+  position: relative;
+  background-image: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.85)), url('why-choose-us.jpg'); /* Replace with your actual image file name */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 6rem 2rem !important;
+  border-radius: 12px;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  text-align: center;
+  color: #ffffff !important;
+}
+
+.page-hero-section h1 {
+  color: #ffffff !important;
+}
+
+.page-hero-section p {
+  color: #cbd5e1 !important; /* Lighter muted text for readability */
+}
