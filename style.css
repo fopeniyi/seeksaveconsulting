@@ -1,12 +1,21 @@
+/* ==========================================================================
+   1. Base Variables & Core Setup
+   ========================================================================== */
 :root {
-  --bg: #f5f3ef;         /* The warm cream background from your image */
-  --surface: #ffffff;    /* Card and input background (pure white for contrast) */
-  --text: #1c1c1e;       /* Deep dark charcoal for crisp readability */
-  --muted: #6b6b70;      /* Muted gray for subtext and descriptions */
+  --bg: #f5f3ef;         /* Warm cream background */
+  --bg-darker: #e8e4db;  /* Richer variant of cream theme */
+  --surface: #ffffff;    /* Card and input background (pure white) */
+  --text: #0f172a;       /* Institutional Deep Navy / Dark Charcoal */
+  --muted: #475569;      /* Muted gray for subtext and descriptions */
   --border: #e2ded4;     /* Soft warm border color */
+  --accent: #c5a059;     /* Editorial gold/bronze accent */
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
+* { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+}
 
 body {
   background-color: var(--bg);
@@ -23,16 +32,20 @@ h1, h2, h3, .logo {
 }
 
 .wrap {
-  max-width: 1000px;
+  max-width: 1300px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 2.5rem 2rem 5rem 2rem;
 }
 
+
+/* ==========================================================================
+   2. Header & Navigation
+   ========================================================================== */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2.5rem 0;
+  padding-bottom: 3rem;
   border-bottom: 1px solid var(--border);
   margin-bottom: 4rem;
 }
@@ -43,28 +56,35 @@ header .logo {
   text-decoration: none;
 }
 
+header nav {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
 header nav a {
   color: var(--muted);
   text-decoration: none;
-  margin-left: 2rem;
   font-size: 0.95rem;
-  transition: color 0.2s;
+  font-weight: 500;
+  transition: color 0.2s ease;
 }
 
-header nav a:hover, header nav a.active {
+header nav a:hover, 
+header nav a.active {
   color: var(--text);
 }
 
-main, section {
-  padding: 4rem 0;
-  border-bottom: 1px solid var(--border);
-}
 
+/* ==========================================================================
+   3. Hero Section & General Typography / Components
+   ========================================================================== */
 .hero {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
   gap: 4rem;
   align-items: center;
+  margin-bottom: 6rem;
 }
 
 .hero h1 {
@@ -82,136 +102,42 @@ main, section {
 .btn {
   display: inline-block;
   background: var(--text);
-  color: var(--bg);
+  color: #ffffff;
   padding: 0.85rem 1.75rem;
-  border-radius: 4px;
+  border-radius: 50px;
   text-decoration: none;
   font-weight: 500;
   font-size: 0.95rem;
-  transition: opacity 0.2s;
+  transition: background-color 0.2s ease, opacity 0.2s ease;
 }
 
-.btn:hover { opacity: 0.85; }
+.btn:hover { 
+  background-color: #1e293b;
+}
 
-/* SVG Chart styles for light background */
-.chart { width: 100%; height: auto; }
+/* SVG Chart styles */
+.chart { 
+  width: 100%; 
+  height: auto; 
+  background: var(--bg-darker);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
 .grid { stroke: var(--border); stroke-dasharray: 4; }
 .base { fill: none; stroke: var(--muted); stroke-width: 2; }
-.gain { fill: none; stroke: var(--text); stroke-width: 2.5; }
+.gain { fill: none; stroke: var(--accent); stroke-width: 2.5; }
 .chart text { fill: var(--muted); font-size: 12px; font-family: 'Hanken Grotesk', sans-serif; }
 
-/* Grid rows for content pages */
-.row-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2.5rem;
-  margin-top: 3rem;
-}
 
-.row h3 { font-size: 1.25rem; margin-bottom: 0.75rem; }
-.row p { color: var(--muted); font-size: 0.95rem; }
-
-/* Band / Stats */
-.band-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  text-align: center;
-  margin-top: 2rem;
-}
-.band-grid b { display: block; font-size: 2.5rem; font-family: 'Spectral', serif; font-weight: normal; color: var(--text); }
-.band-grid span { color: var(--muted); font-size: 0.9rem; }
-
-/* Contact form */
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-}
-
-label { display: block; font-size: 0.85rem; color: var(--muted); margin-bottom: 0.4rem; }
-input, textarea {
-  width: 100%;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  padding: 0.75rem;
-  color: var(--text);
-  border-radius: 4px;
-  margin-bottom: 1.5rem;
-  font-family: inherit;
-}
-input:focus, textarea:focus { outline: 1px solid var(--text); }
-textarea { height: 120px; resize: vertical; }
-
-#sent { display: none; margin-top: 1rem; color: #15803d; font-size: 0.9rem; }
-
-footer {
-  padding: 3rem 0;
-  color: var(--muted);
-  font-size: 0.85rem;
-}
-footer p { margin-bottom: 0.75rem; }
-
-/* Real Estate Page Additions */
-.real-estate-intro {
-  color: var(--muted);
-  font-size: 1.05rem;
-  margin-bottom: 2rem;
-  line-height: 1.7;
-}
-
-.check-list {
-  list-style: none;
-  margin: 2rem 0;
-}
-
-.check-list li {
-  position: relative;
-  padding-left: 2rem;
-  margin-bottom: 1rem;
-  color: var(--muted);
-  font-size: 0.95rem;
-}
-
-.check-list li::before {
-  content: "✔";
-  position: absolute;
-  left: 0;
-  color: #dc2626;
-  font-weight: bold;
-}
-
-.property-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  margin-top: 3rem;
-}
-
-.property-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.property-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  display: block;
-}
-
-@media(max-width: 768px) {
-  .hero, .row-grid, .band-grid, .contact-grid, .property-grid { grid-template-columns: 1fr; gap: 2rem; }
-  .hero h1 { font-size: 2.25rem; }
-}
-
-/* Centered Approach Section Styling */
+/* ==========================================================================
+   4. Sections & Layout Blocks
+   ========================================================================== */
 .centered-section {
   text-align: center;
   max-width: 800px;
   margin: 0 auto;
+  padding: 4rem 0;
+  border-bottom: 1px solid var(--border);
 }
 
 .section-eyebrow {
@@ -220,18 +146,12 @@ footer p { margin-bottom: 0.75rem; }
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 0.75rem;
+  display: block;
 }
 
 .centered-section h2 {
   font-size: 2.25rem;
-  font-family: 'Spectral', serif;
-  font-weight: 400;
   margin-bottom: 1.5rem;
-}
-
-.centered-section .row-grid {
-  display: block; /* Overrides the 3-column grid for this specific section */
-  margin-top: 0;
 }
 
 .centered-section .row p {
@@ -240,43 +160,66 @@ footer p { margin-bottom: 0.75rem; }
   line-height: 1.7;
 }
 
-
-/* Split Section - Forced Side-by-Side with Image First */
-.split-section {
-  padding: 4rem 0;
-  border-bottom: 1px solid var(--border);
-}
-
-.split-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* Image column (left) | Content column (right) */
-  gap: 2.5rem;
-  align-items: center;
-}
-
-.split-image img {
-  width: 100%;
-  height: 350px;
-  object-fit: contain;
+/* Highlight & Full-Screen Sections */
+.highlight-section {
+  background-color: var(--bg-darker);
+  padding: 4rem 2rem;
   border-radius: 8px;
+  margin: 2rem 0;
   border: 1px solid var(--border);
 }
 
-.split-content h2 {
-  font-size: 1.8rem;
-  font-family: 'Spectral', serif;
-  font-weight: 400;
-  margin-bottom: 0.75rem;
-  line-height: 1.2;
+.full-screen-section {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background-color: var(--bg-darker);
+  padding: 5rem 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  box-sizing: border-box;
 }
 
-.split-content p {
-  color: var(--muted);
-  font-size: 0.95rem;
-  margin-bottom: 1.5rem;
-  line-height: 1.6;
+.full-screen-container {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 3.5rem;
+  align-items: center;
 }
 
+.full-screen-section .split-image img {
+  width: 100%;
+  height: auto;
+  max-height: 600px;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.full-screen-container-single {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.full-screen-container-single .image img {
+  width: 100%;
+  height: 310px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+}
+
+/* Service & Stats Grids */
 .split-stats {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -286,175 +229,42 @@ footer p { margin-bottom: 0.75rem; }
 }
 
 .split-stats h3 {
-  font-size: 1.3rem;
-  font-family: 'Spectral', serif;
+  font-size: 1.2rem;
   color: var(--text);
   margin-bottom: 0.15rem;
 }
 
 .split-stats p {
-  font-size: 0.8rem;
-  color: var(--muted);
-  margin-bottom: 0;
-}
-
-/* Custom Darker Cream Background Section */
-.highlight-section {
-  background-color: #e8e4db; /* A slightly deeper, rich variant of your cream theme */
-  padding: 4rem 2rem;
-  border-radius: 8px;
-  margin: 2rem 0;
-  border: 1px solid var(--border);
-}
-
-/* Full-Screen Edge-to-Edge Section */
-.full-screen-section {
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  background-color: #e8e4db; /* Darker cream background */
-  padding: 5rem 0;
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-}
-
-.full-screen-container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 4rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: center;
-}
-
-.full-screen-section .split-image img {
-  width: 150%;
-  height: 400px;
-  object-fit: contain;
-  border-radius: 6px;
-  border: 1px solid var(--border);
-}
-
-.full-screen-section .split-content h2 {
-  font-size: 2.25rem;
-  font-family: 'Spectral', serif;
-  font-weight: 400;
-  margin-bottom: 1rem;
-  line-height: 1.2;
-}
-
-.full-screen-section .split-content p {
-  color: var(--muted);
-  font-size: 1.05rem;
-  margin-bottom: 2rem;
-  line-height: 1.7;
-}
-
-.full-screen-section .split-stats {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  border-top: 1px solid var(--border);
-  padding-top: 1.5rem;
-}
-
-.full-screen-section .split-stats h3 {
-  font-size: 1.5rem;
-  font-family: 'Spectral', serif;
-  color: var(--text);
-  margin-bottom: 0.25rem;
-}
-
-.full-screen-section .split-stats p {
   font-size: 0.85rem;
   color: var(--muted);
   margin-bottom: 0;
 }
 
-/* Single Image Full-Screen Section Styling */
-.full-screen-container-single {
-  max-width: 1150px;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-.full-screen-container-single .image img {
-  width: 150%;
-  height: 310px; /* Adjust this number to make it shorter or taller */
-  object-fit: contain;
-  border-radius: 6px;
-  border: 1px solid var(--border);
-}
-
-/* Full-Screen Edge-to-Edge Container */
-.full-screen-section {
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  background-color: #e8e4db; /* Darker cream background */
-  padding: 5rem 0;
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-}
-
-.full-screen-container {
-  max-width: 1500px;
-  margin: 0 auto;
-  padding: 0 3rem;
+.service-grid {
   display: grid;
-  grid-template-columns: 1fr 1.4fr; /* Image on left, wider service grid on right */
-  gap: 3.5rem;
-  align-items: center;
-}
-
-/* Image styling ensuring it displays fully without top clipping */
-.full-screen-section .split-image img {
-  width: 100%;
-  height: auto;
-  max-height: 600px;
-  object-fit: contain;
-  border-radius: 6px;
-}
-
-/* Content typography */
-.full-screen-section .split-content h2 {
-  font-size: 2rem;
-  font-family: 'Spectral', serif;
-  font-weight: 400;
-  margin-bottom: 1.5rem;
-  line-height: 1.2;
-}
-
-/* 6-Item Grid for Services */
-.full-screen-section .service-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* 2 columns of services */
+  grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
   border-top: 1px solid var(--border);
   padding-top: 1.5rem;
 }
 
-.full-screen-section .service-grid h3 {
+.service-grid h3 {
   font-size: 1.05rem;
-  font-family: 'Spectral', serif;
   color: var(--text);
   margin-bottom: 0.25rem;
 }
 
-.full-screen-section .service-grid p {
+.service-grid p {
   font-size: 0.85rem;
   color: var(--muted);
   line-height: 1.5;
   margin-bottom: 0;
 }
 
+
+/* ==========================================================================
+   5. Performance Highlights Cards Section (Deep Navy)
+   ========================================================================== */
 .highlights-section {
   width: 100vw;
   position: relative;
@@ -462,9 +272,10 @@ footer p { margin-bottom: 0.75rem; }
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
-  background-color: #0f172a; /* Deep Navy Theme */
+  background-color: #0f172a;
   color: #f8fafc;
   padding: 6rem 0;
+  box-sizing: border-box;
 }
 
 .highlights-container {
@@ -479,9 +290,7 @@ footer p { margin-bottom: 0.75rem; }
 }
 
 .highlights-header h2 {
-  font-family: 'Spectral', serif;
   font-size: 2.5rem;
-  font-weight: 400;
   color: #ffffff;
   margin-top: 0.5rem;
 }
@@ -511,7 +320,6 @@ footer p { margin-bottom: 0.75rem; }
 }
 
 .card-content h3 {
-  font-family: 'Spectral', serif;
   font-size: 1.25rem;
   margin-bottom: 0.75rem;
   color: #ffffff;
@@ -528,27 +336,17 @@ footer p { margin-bottom: 0.75rem; }
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  color: #c5a059;
+  color: var(--accent);
   text-decoration: none;
   font-weight: 500;
   font-size: 0.9rem;
   margin-top: auto;
 }
 
-/* Responsive collapse for smaller screens */
-@media(max-width: 1100px) {
-  .cards-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
 
-@media(max-width: 650px) {
-  .cards-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* --- SECTION 1: Why Clients Choose SeekSave (Inverted Cream Theme) --- */
+/* ==========================================================================
+   6. Why Clients Choose SeekSave (Interactive Carousel)
+   ========================================================================== */
 .why-choose-section.inverted-cream-theme {
   width: 100vw;
   position: relative;
@@ -556,12 +354,13 @@ footer p { margin-bottom: 0.75rem; }
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
-  background-color: #f5f3ef; /* Section background is now light cream */
+  background-color: var(--bg);
   color: var(--text);
   padding: 6rem 2rem;
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 .why-container {
@@ -577,29 +376,19 @@ footer p { margin-bottom: 0.75rem; }
 }
 
 .why-title {
-  font-family: 'Spectral', serif;
   font-size: 2.25rem;
   letter-spacing: 1px;
   margin-bottom: 0.5rem;
   color: var(--text);
 }
 
-.why-subtitle {
-  color: var(--muted);
-  font-size: 0.95rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin: 0;
-}
-
-/* Navigation Buttons */
 .carousel-nav {
   display: flex;
   gap: 0.75rem;
 }
 
 .carousel-btn {
-  background-color: #e8e4db; /* Matches the inverted card color */
+  background-color: var(--bg-darker);
   border: 1px solid var(--border);
   color: var(--text);
   width: 45px;
@@ -614,12 +403,11 @@ footer p { margin-bottom: 0.75rem; }
 }
 
 .carousel-btn:hover {
-  background-color: #c5a059;
+  background-color: var(--accent);
   color: #ffffff;
-  border-color: #c5a059;
+  border-color: var(--accent);
 }
 
-/* Viewport & Track for Sliding */
 .carousel-viewport {
   width: 100%;
   overflow: hidden;
@@ -634,7 +422,7 @@ footer p { margin-bottom: 0.75rem; }
 .reason-card {
   min-width: 320px;
   flex: 0 0 calc(33.333% - 1rem);
-  background-color: #e8e4db; /* Cards are now the darker cream color */
+  background-color: var(--bg-darker);
   border: 1px solid var(--border);
   border-radius: 8px;
   padding: 2.5rem 2rem;
@@ -648,14 +436,14 @@ footer p { margin-bottom: 0.75rem; }
 
 .reason-card:hover {
   transform: translateY(-4px);
-  border-color: #c5a059;
+  border-color: var(--accent);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
 }
 
 .reason-badge {
   width: 40px;
   height: 40px;
-  background-color: #c5a059;
+  background-color: var(--accent);
   color: #ffffff;
   font-weight: bold;
   border-radius: 50%;
@@ -667,7 +455,6 @@ footer p { margin-bottom: 0.75rem; }
 }
 
 .reason-card h3 {
-  font-family: 'Spectral', serif;
   font-size: 1.25rem;
   margin-bottom: 0.75rem;
   color: var(--text);
@@ -680,33 +467,10 @@ footer p { margin-bottom: 0.75rem; }
   margin: 0;
 }
 
-.card-link-text {
-  display: inline-block;
-  margin-top: 1.5rem;
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: #c5a059;
-}
 
-/* Responsive adjustments */
-@media(max-width: 1024px) {
-  .reason-card {
-    flex: 0 0 calc(50% - 0.75rem); /* Shows 2 cards on tablet */
-  }
-}
-
-@media(max-width: 650px) {
-  .reason-card {
-    flex: 0 0 100%; /* Shows 1 card on mobile */
-  }
-  .why-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1.5rem;
-  }
-}
-
-/* --- Call to Action Section Styling --- */
+/* ==========================================================================
+   7. Call to Action Section (Deep Navy)
+   ========================================================================== */
 .cta-section {
   width: 100vw;
   position: relative;
@@ -714,11 +478,12 @@ footer p { margin-bottom: 0.75rem; }
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
-  background-color: #0f172a; /* Exact Deep Navy requested */
+  background-color: #0f172a;
   color: #ffffff;
   padding: 6rem 2rem;
   text-align: center;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
+  box-sizing: border-box;
 }
 
 .cta-container {
@@ -727,7 +492,6 @@ footer p { margin-bottom: 0.75rem; }
 }
 
 .cta-section h2 {
-  font-family: 'Spectral', serif;
   font-size: 2.75rem;
   font-weight: 400;
   line-height: 1.25;
@@ -747,11 +511,11 @@ footer p { margin-bottom: 0.75rem; }
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
-  background-color: #1e293b; /* Subtle contrast layer for the button background */
+  background-color: #1e293b;
   color: #ffffff;
   border: 1px solid rgba(255, 255, 255, 0.15);
   padding: 1rem 1.75rem;
-  border-radius: 50px; /* Fully rounded pill shape */
+  border-radius: 50px;
   text-decoration: none;
   font-size: 0.95rem;
   font-weight: 500;
@@ -761,7 +525,7 @@ footer p { margin-bottom: 0.75rem; }
 .cta-btn .btn-arrow {
   width: 32px;
   height: 32px;
-  background-color: #f5f3ef; /* Warm cream accent circle */
+  background-color: var(--bg);
   color: #0f172a;
   border-radius: 50%;
   display: flex;
@@ -772,33 +536,20 @@ footer p { margin-bottom: 0.75rem; }
 }
 
 .cta-btn:hover {
-  border-color: #c5a059; /* Editorial gold/bronze border on hover */
+  border-color: var(--accent);
   transform: translateY(-2px);
 }
 
 .cta-btn:hover .btn-arrow {
-  background-color: #c5a059; /* Turns gold on hover */
+  background-color: var(--accent);
   color: #ffffff;
   transform: translateX(3px);
 }
 
-/* Responsive adjustments */
-@media(max-width: 650px) {
-  .cta-section h2 {
-    font-size: 2rem;
-  }
-  .cta-buttons {
-    flex-direction: column;
-    align-items: stretch;
-  }
-  .cta-btn {
-    justify-content: space-between;
-  }
-}
 
-/* --- Footer Styling --- */
-/* --- Footer Layout Locked for All Screen Sizes --- */
-
+/* ==========================================================================
+   8. Footer & Floating Newsletter
+   ========================================================================== */
 .site-footer {
   width: 100vw;
   position: relative;
@@ -806,9 +557,9 @@ footer p { margin-bottom: 0.75rem; }
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
-  background-color: #f5f3ef; /* Warm cream background */
+  background-color: var(--bg);
   color: var(--text);
-  padding: 4rem 2rem 0rem 2rem; /* Bottom padding removed so card hangs off bottom */
+  padding: 4rem 2rem 0 2rem;
   border-top: 1px solid var(--border);
   box-sizing: border-box;
 }
@@ -818,20 +569,119 @@ footer p { margin-bottom: 0.75rem; }
   margin: 0 auto;
 }
 
-/* Floating Newsletter Card Overlapping Bottom */
+.footer-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.social-icon {
+  background-color: #f97316;
+  color: #ffffff;
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.social-icon:hover {
+  background-color: #ea580c;
+}
+
+.footer-divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin-bottom: 3rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1.2fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.footer-col h4 {
+  font-size: 1.15rem;
+  color: var(--text);
+  margin-bottom: 1.25rem;
+  font-weight: 600;
+}
+
+.links-subgrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.75rem;
+}
+
+.footer-links a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: var(--text);
+}
+
+.footer-contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-contact-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+.contact-badge {
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  border-radius: 50%;
+  background-color: #f97316;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+}
+
+/* Floating Newsletter Card */
 .newsletter-card-wrapper {
   max-width: 1200px;
   margin: 4rem auto 0 auto;
   padding: 0 1rem;
   position: relative;
-  bottom: -40px; /* Pulls card down to hang off the bottom of footer section */
+  bottom: -40px;
   z-index: 10;
 }
 
 .newsletter-card {
-  background-color: #ffffff;
+  background-color: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 20px 20px 0 0; /* Rounded top corners matching the screenshot */
+  border-radius: 20px 20px 0 0;
   padding: 2.25rem 3rem;
   display: flex;
   justify-content: space-between;
@@ -847,7 +697,7 @@ footer p { margin-bottom: 0.75rem; }
 
 .envelope-icon {
   font-size: 2rem;
-  color: #ea580c; /* Matching orange accent */
+  color: #ea580c;
   background-color: #fff7ed;
   width: 55px;
   height: 55px;
@@ -858,7 +708,6 @@ footer p { margin-bottom: 0.75rem; }
 }
 
 .newsletter-card h3 {
-  font-family: 'Spectral', serif;
   font-size: 1.25rem;
   margin: 0 0 0.25rem 0;
   color: var(--text);
@@ -873,7 +722,7 @@ footer p { margin-bottom: 0.75rem; }
 .newsletter-form {
   display: flex;
   align-items: center;
-  background-color: #ffffff;
+  background-color: var(--surface);
   border: 1px solid #e2e8f0;
   border-radius: 50px;
   padding: 0.35rem 0.35rem 0.35rem 1.25rem;
@@ -909,13 +758,6 @@ footer p { margin-bottom: 0.75rem; }
   background-color: #c2410c;
 }
 
-.footer-grid {
-  display: grid;
-  grid-template-columns: 2fr 1.2fr; /* Allocates more room for the split quick links, and structured space for contact info */
-  gap: 4rem;
-  align-items: start;
-}
-
 .footer-bottom-bar {
   text-align: center;
   padding: 3rem 1rem 1rem 1rem;
@@ -925,8 +767,19 @@ footer p { margin-bottom: 0.75rem; }
   margin-top: 3rem;
 }
 
-/* Only stack the newsletter card on small mobile screens if needed, 
-   while keeping the footer layout fully intact as requested */
+
+/* ==========================================================================
+   9. Responsive Media Queries
+   ========================================================================== */
+@media(max-width: 1100px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .reason-card {
+    flex: 0 0 calc(50% - 0.75rem);
+  }
+}
+
 @media(max-width: 900px) {
   .newsletter-card {
     flex-direction: column;
@@ -937,5 +790,39 @@ footer p { margin-bottom: 0.75rem; }
   .newsletter-form {
     width: 100%;
     box-sizing: border-box;
+  }
+}
+
+@media(max-width: 768px) {
+  .hero, 
+  .full-screen-container, 
+  .full-screen-container-single { 
+    grid-template-columns: 1fr; 
+    gap: 2rem; 
+  }
+  .hero h1 { font-size: 2.25rem; }
+}
+
+@media(max-width: 650px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .reason-card {
+    flex: 0 0 100%;
+  }
+  .why-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+  .cta-section h2 {
+    font-size: 2rem;
+  }
+  .cta-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .cta-btn {
+    justify-content: space-between;
   }
 }
