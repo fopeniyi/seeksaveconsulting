@@ -179,13 +179,13 @@
       </div>
     </section>
 
-    <!-- Why Clients Choose SeekSave (Carousel / Slider Section) -->
+    <!-- Privacy Policy Overview Carousel Section -->
     <section class="why-choose-section inverted-cream-theme">
       <div class="why-container">
         <div class="why-header">
           <div class="header-text-group">
-            <span class="section-eyebrow">Legal</span>
-            <h2 class="why-title">Information Sharing and Disclosure</h2>
+            <span class="section-eyebrow">Legal & Compliance</span>
+            <h2 class="why-title">Privacy Policy Overview</h2>
           </div>
           
           <!-- Navigation Arrows -->
@@ -199,62 +199,60 @@
         <div class="carousel-viewport">
           <div class="reasons-carousel-track">
             <!-- Card 1 -->
-            <a href="why-choose-us.html" class="reason-card">
+            <a href="privacy.html" class="reason-card">
               <div class="reason-badge">1</div>
-              <h3>Privacy Policy</h3>
-              <p>We value your privacy. Please read our Privacy Policy to understand how we handle your personal information.</p>
+              <h3>Information We Collect</h3>
+              <p>Gathering personal, financial, and contact details via secure forms or account applications.</p>
             </a>
             <!-- Card 2 -->
-            <a href="why-choose-us.html" class="reason-card">
+            <a href="privacy.html" class="reason-card">
               <div class="reason-badge">2</div>
-              <h3>Terms of Use</h3>
-              <p>By accessing this website, you agree to our Terms of Use which outline your responsibilities and our legal limitations.</p>
+              <h3>How We Use Information</h3>
+              <p>Utilizing data to provide tailored financial advisory services, process requests, and communicate updates.</p>
             </a>
             <!-- Card 3 -->
-            <a href="why-choose-us.html" class="reason-card">
+            <a href="privacy.html" class="reason-card">
               <div class="reason-badge">3</div>
-              <h3>AI-Enhanced Analytics</h3>
-              <p>Cutting-edge insights for superior risk management and smarter rebalancing.</p>
+              <h3>Information Sharing</h3>
+              <p>Clarifying strict limits on data sharing; we never sell client information to third parties.</p>
             </a>
             <!-- Card 4 -->
-            <a href="why-choose-us.html" class="reason-card">
+            <a href="privacy.html" class="reason-card">
               <div class="reason-badge">4</div>
-              <h3>Important Disclaimers</h3>
-              <p>All investments carry risk. Past performance does not guarantee future results.</p>
-              <p>The content provided is for informational purposes only and is not intended as legal, tax, or investment advice.</p>
-              <p>Clients should consult their own legal or tax advisors before making any financial decisions.</p>
+              <h3>Data Security</h3>
+              <p>Employing robust technical and administrative safeguards to protect your sensitive financial records.</p>
             </a>
             <!-- Card 5 -->
-            <a href="why-choose-us.html" class="reason-card">
+            <a href="privacy.html" class="reason-card">
               <div class="reason-badge">5</div>
-              <h3>Fee Transparency</h3>
-              <p>We charge a low, transparent advisory fee.</p>
+              <h3>Cookies & Tracking</h3>
+              <p>Understanding how analytics and cookies help monitor site performance and enhance your user experience.</p>
             </a>
           </div>
         </div>
       </div>
     </section>
 
-
+    <!-- Carousel Functionality Script -->
     <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const track = document.querySelector('.reasons-carousel-track');
-    const prevBtn = document.querySelector('.prev-btn');
-    const nextBtn = document.querySelector('.next-btn');
+      document.addEventListener('DOMContentLoaded', function () {
+        const track = document.querySelector('.reasons-carousel-track');
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
 
-    if (track && prevBtn && nextBtn) {
-      const scrollAmount = 320; // Adjust scroll distance per click
+        if (track && prevBtn && nextBtn) {
+          const scrollAmount = 320; // Scroll distance per click
 
-      nextBtn.addEventListener('click', function () {
-        track.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+          nextBtn.addEventListener('click', function () {
+            track.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+          });
+
+          prevBtn.addEventListener('click', function () {
+            track.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+          });
+        }
       });
-
-      prevBtn.addEventListener('click', function () {
-        track.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-      });
-    }
-  });
-</script>
+    </script>
 
   </main>
 </div>
