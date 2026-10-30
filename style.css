@@ -808,7 +808,7 @@ footer p { margin-bottom: 0.75rem; }
   margin-right: -50vw;
   background-color: #f5f3ef; /* Warm cream background */
   color: var(--text);
-  padding: 4rem 2rem 5rem 2rem;
+  padding: 4rem 2rem 0rem 2rem; /* Bottom padding removed so card hangs off bottom */
   border-top: 1px solid var(--border);
   box-sizing: border-box;
 }
@@ -818,22 +818,25 @@ footer p { margin-bottom: 0.75rem; }
   margin: 0 auto;
 }
 
-/* Floating Newsletter Card */
+/* Floating Newsletter Card Overlapping Bottom */
 .newsletter-card-wrapper {
   max-width: 1200px;
-  margin: 0 auto 4rem auto;
+  margin: 4rem auto 0 auto;
   padding: 0 1rem;
+  position: relative;
+  bottom: -40px; /* Pulls card down to hang off the bottom of footer section */
+  z-index: 10;
 }
 
 .newsletter-card {
   background-color: #ffffff;
   border: 1px solid var(--border);
-  border-radius: 20px;
+  border-radius: 20px 20px 0 0; /* Rounded top corners matching the screenshot */
   padding: 2.25rem 3rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 -10px 25px rgba(0, 0, 0, 0.03);
 }
 
 .newsletter-icon-title {
@@ -844,7 +847,7 @@ footer p { margin-bottom: 0.75rem; }
 
 .envelope-icon {
   font-size: 2rem;
-  color: #f97316;
+  color: #ea580c; /* Matching orange accent */
   background-color: #fff7ed;
   width: 55px;
   height: 55px;
@@ -871,7 +874,7 @@ footer p { margin-bottom: 0.75rem; }
   display: flex;
   align-items: center;
   background-color: #ffffff;
-  border: 1px solid #cbd5e1;
+  border: 1px solid #e2e8f0;
   border-radius: 50px;
   padding: 0.35rem 0.35rem 0.35rem 1.25rem;
   width: 420px;
@@ -902,138 +905,8 @@ footer p { margin-bottom: 0.75rem; }
   transition: background-color 0.2s ease;
 }
 
-/* Footer Top Row */
-.footer-top-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2rem;
-}
-
-.footer-logo {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-.logo-bird {
-  font-size: 2rem;
-}
-
-.logo-text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.1;
-}
-
-.brand-name {
-  font-family: 'Spectral', serif;
-  font-weight: bold;
-  font-size: 1.25rem;
-  letter-spacing: 0.5px;
-  color: #0f172a;
-}
-
-.brand-sub {
-  font-size: 0.65rem;
-  letter-spacing: 1px;
-  color: var(--muted);
-}
-
-.social-icon {
-  background-color: #f97316;
-  color: #ffffff;
-  width: 42px;
-  height: 42px;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.footer-divider {
-  border: none;
-  border-top: 1px solid var(--border);
-  margin-bottom: 3rem;
-}
-
-/* --- LOCKED 3-COLUMN GRID (Never stacks into single column) --- */
-.footer-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.5fr 1.2fr;
-  gap: 3rem;
-}
-
-.footer-col h4 {
-  font-family: 'Spectral', serif;
-  font-size: 1.15rem;
-  color: var(--text);
-  margin-bottom: 1.25rem;
-  font-weight: 600;
-}
-
-.footer-info-text {
-  font-size: 0.9rem;
-  color: var(--muted);
-  margin: 0;
-}
-
-/* --- LOCKED SIDE-BY-SIDE QUICK LINKS SUB-GRID --- */
-.links-subgrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-}
-
-.footer-links {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer-links li {
-  margin-bottom: 0.75rem;
-}
-
-.footer-links a {
-  color: var(--muted);
-  text-decoration: none;
-  font-size: 0.9rem;
-  transition: color 0.2s ease;
-}
-
-.footer-links a:hover {
-  color: #0f172a;
-}
-
-/* Contact List styling */
-.footer-contact-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer-contact-list li {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.85rem;
-  margin-bottom: 1rem;
-  font-size: 0.9rem;
-  color: var(--muted);
-  line-height: 1.4;
-}
-
-.contact-badge {
-  width: 32px;
-  height: 32px;
-  min-width: 32px;
-  border-radius: 50%;
-  background-color: #f97316;
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.85rem;
+.subscribe-btn:hover {
+  background-color: #c2410c;
 }
 
 /* Only stack the newsletter card on small mobile screens if needed, 
