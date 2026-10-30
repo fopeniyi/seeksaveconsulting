@@ -37,6 +37,28 @@ h1, h2, h3, .logo {
   padding: 2.5rem 2rem 5rem 2rem;
 }
 
+/* --- Global Reset to Prevent White Gaps Between Sections --- */
+html, body {
+  background-color: #f5f3ef; /* Matches your warm cream theme */
+  margin: 0;
+  padding: 0;
+}
+
+/* Ensure all consecutive full-width and regular sections touch seamlessly */
+section, 
+.full-screen-section, 
+.why-choose-section, 
+.highlights-section, 
+.cta-section, 
+.site-footer {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* Remove default paragraph bottom spacing that can create internal box spacing */
+p:last-child {
+  margin-bottom: 0;
+}
 
 /* ==========================================================================
    2. Header & Navigation
