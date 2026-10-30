@@ -861,7 +861,7 @@ header nav a.active {
 /* --- Hero Block with Background Image --- */
 .page-hero-section {
   position: relative;
-  background-image: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.85)), url('why-choose-us.jpg'); /* Replace with your actual image file name */
+  background-image: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.85)), url('Container-1-min-2-150x150.png); /* Replace with your actual image file name */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
