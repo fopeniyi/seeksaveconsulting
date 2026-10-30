@@ -909,6 +909,22 @@ footer p { margin-bottom: 0.75rem; }
   background-color: #c2410c;
 }
 
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1.2fr; /* Allocates more room for the split quick links, and structured space for contact info */
+  gap: 4rem;
+  align-items: start;
+}
+
+.footer-bottom-bar {
+  text-align: center;
+  padding: 3rem 1rem 1rem 1rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+  margin-top: 3rem;
+}
+
 /* Only stack the newsletter card on small mobile screens if needed, 
    while keeping the footer layout fully intact as requested */
 @media(max-width: 900px) {
