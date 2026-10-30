@@ -868,7 +868,7 @@ header nav a.active {
   padding: 6rem 2rem !important;
   border-radius: 12px;
   margin-top: 2rem;
-  margin-bottom: 4rem;
+  margin-bottom: 6rem;
   text-align: center;
   color: #ffffff !important;
 }
@@ -880,3 +880,5 @@ header nav a.active {
 .page-hero-section p {
   color: #cbd5e1 !important; /* Lighter muted text for readability */
 }
+
+
