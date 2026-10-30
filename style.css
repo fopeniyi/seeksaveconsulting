@@ -901,3 +901,29 @@ header nav a.active {
 .reason-card {
   flex: 0 0 300px; /* Sets fixed width for each sliding card */
 }
+
+
+/* --- Carousel Layout Fixes --- */
+.carousel-viewport {
+  width: 100%;
+  overflow: hidden; /* Hides the scrollbar container */
+  position: relative;
+}
+
+.reasons-carousel-track {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  flex-wrap: nowrap; /* Forces cards to stay in a single horizontal line */
+  scrollbar-width: none; /* Hides scrollbar for Firefox */
+}
+
+.reasons-carousel-track::-webkit-scrollbar {
+  display: none; /* Hides scrollbar for Chrome, Safari, Opera */
+}
+
+.reason-card {
+  flex: 0 0 320px; /* Gives each card a fixed width so they don't shrink */
+  min-width: 320px;
+}
