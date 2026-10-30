@@ -881,4 +881,23 @@ header nav a.active {
   color: #cbd5e1 !important; /* Lighter muted text for readability */
 }
 
+.carousel-viewport {
+  overflow: hidden;
+  width: 100%;
+}
 
+.reasons-carousel-track {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Hides scrollbar for Firefox */
+}
+
+.reasons-carousel-track::-webkit-scrollbar {
+  display: none; /* Hides scrollbar for Chrome/Safari */
+}
+
+.reason-card {
+  flex: 0 0 300px; /* Sets fixed width for each sliding card */
+}
