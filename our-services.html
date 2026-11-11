@@ -235,6 +235,7 @@
     </section>
 
     <!-- Carousel Functionality Script -->
+    <!-- Carousel Functionality Script -->
     <script>
       document.addEventListener('DOMContentLoaded', function () {
         const track = document.querySelector('.reasons-carousel-track');
@@ -242,14 +243,22 @@
         const nextBtn = document.querySelector('.next-btn');
 
         if (track && prevBtn && nextBtn) {
-          const scrollAmount = 320; // Scroll distance per click
-
           nextBtn.addEventListener('click', function () {
-            track.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            const card = track.querySelector('.reason-card');
+            if (card) {
+              const cardWidth = card.getBoundingClientRect().width;
+              const gap = parseFloat(window.getComputedStyle(track).gap) || 32;
+              track.scrollBy({ left: cardWidth + gap, behavior: 'smooth' });
+            }
           });
 
           prevBtn.addEventListener('click', function () {
-            track.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            const card = track.querySelector('.reason-card');
+            if (card) {
+              const cardWidth = card.getBoundingClientRect().width;
+              const gap = parseFloat(window.getComputedStyle(track).gap) || 32;
+              track.scrollBy({ left: -(cardWidth + gap), behavior: 'smooth' });
+            }
           });
         }
       });
