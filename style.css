@@ -906,7 +906,7 @@ header nav a.active {
 /* --- Carousel Layout Fixes --- */
 .carousel-viewport {
   width: 100%;
-  overflow: hidden; /* Hides the scrollbar container */
+  overflow: hidden;
   position: relative;
 }
 
@@ -915,15 +915,16 @@ header nav a.active {
   gap: 2rem;
   overflow-x: auto;
   scroll-behavior: smooth;
-  flex-wrap: nowrap; /* Forces cards to stay in a single horizontal line */
-  scrollbar-width: none; /* Hides scrollbar for Firefox */
+  flex-wrap: nowrap;
+  scrollbar-width: none; /* Firefox */
 }
 
 .reasons-carousel-track::-webkit-scrollbar {
-  display: none; /* Hides scrollbar for Chrome, Safari, Opera */
+  display: none; /* Chrome, Safari, Edge */
 }
 
 .reason-card {
-  flex: 0 0 320px; /* Gives each card a fixed width so they don't shrink */
+  flex: 0 0 320px;
   min-width: 320px;
+  box-sizing: border-box;
 }
