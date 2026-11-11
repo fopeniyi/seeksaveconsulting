@@ -124,6 +124,71 @@
       </div>
     </section>
 
+
+    <!-- Frequently Asked Questions Section -->
+    <section class="faq-section">
+      <div class="faq-container">
+        <h2 class="faq-title">Frequently Asked Questions</h2>
+        <div class="faq-accordion">
+          
+          <div class="faq-item active">
+            <button class="faq-question">
+              <span>How are your fees structured?</span>
+              <span class="faq-icon">−</span>
+            </button>
+            <div class="faq-answer">
+              We charge a low, transparent percentage of assets under management.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Where are my assets held?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              We use custodians such as Schwab or Fidelity to safeguard your investments.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>What does a financial plan include?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              Everything from budgeting to retirement and estate planning.
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Accordion Script -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+          const btn = item.querySelector('.faq-question');
+          btn.addEventListener('click', () => {
+            const isOpen = item.classList.contains('active');
+            // Close all items
+            faqItems.forEach(i => {
+              i.classList.remove('active');
+              i.querySelector('.faq-icon').textContent = '+';
+            });
+            // Open clicked item if it wasn't open
+            if (!isOpen) {
+              item.classList.add('active');
+              item.querySelector('.faq-icon').textContent = '−';
+            }
+          });
+        });
+      });
+    </script>
+
+    
   </main>
 </div>
 
