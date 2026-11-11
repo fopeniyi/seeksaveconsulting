@@ -83,7 +83,6 @@
     <!-- Section 2: YouTube Channel -->
     <section class="full-screen-section highlight-section" style="border-top: 1px solid var(--border);">
       <div class="full-screen-container">
-        
         <div class="split-content">
           <span class="section-eyebrow">Find us Online</span>
           <h2>Join Us on YouTube for In-Depth Market Insights</h2>
@@ -123,7 +122,6 @@
         </div>
       </div>
     </section>
-
 
     <!-- Frequently Asked Questions Section -->
     <section class="faq-section">
@@ -165,7 +163,29 @@
       </div>
     </section>
 
-    
+    <!-- FAQ Accordion Toggle Script -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+          const btn = item.querySelector('.faq-question');
+          btn.addEventListener('click', () => {
+            const isOpen = item.classList.contains('active');
+            faqItems.forEach(i => {
+              i.classList.remove('active');
+              const icon = i.querySelector('.faq-icon');
+              if (icon) icon.textContent = '+';
+            });
+            if (!isOpen) {
+              item.classList.add('active');
+              const icon = item.querySelector('.faq-icon');
+              if (icon) icon.textContent = '−';
+            }
+          });
+        });
+      });
+    </script>
+
   </main>
 </div>
 
