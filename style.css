@@ -971,7 +971,7 @@ header nav a.active {
 
 .team-card {
   background-color: var(--surface);
-  border: 2px solid #e07a5f; /* Warm border matching your screenshot framing */
+  border: 2px solid #e07a5f;
   border-radius: 12px;
   padding: 3rem 2.5rem;
   display: flex;
