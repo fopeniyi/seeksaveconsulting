@@ -910,18 +910,18 @@ header nav a.active {
 
 
 /* ==========================================================================
-   Frequently Asked Questions (FAQ) Accordion Section
+   FAQ / Text Section Styling
    ========================================================================== */
 .faq-section {
-  background-color: #0f172a;
+  background-color: #0f172a !important;
   width: 100vw;
   position: relative;
   left: 50%;
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
-  padding: 7rem 2rem 8rem 2rem;
-  color: #ffffff;
+  padding: 6rem 2rem;
+  color: #ffffff !important;
   box-sizing: border-box;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
@@ -936,73 +936,6 @@ header nav a.active {
   font-size: 2.75rem;
   text-align: center;
   font-weight: 400;
-  margin-bottom: 3.5rem;
-  color: #ffffff;
-  letter-spacing: -0.5px;
-}
-
-.faq-accordion {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-}
-
-.faq-item {
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 8px;
-  overflow: hidden;
-  background-color: #1e293b;
-  transition: border-color 0.25s ease, box-shadow 0.25s ease;
-}
-
-.faq-item:hover {
-  border-color: rgba(197, 160, 89, 0.4); /* Soft gold border hover */
-}
-
-.faq-item.active {
-  border-color: var(--accent);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-}
-
-.faq-question {
-  width: 100%;
-  background: none;
-  border: none;
-  color: #ffffff;
-  padding: 1.5rem 1.75rem;
-  text-align: left;
-  font-size: 1.1rem;
-  font-family: 'Hanken Grotesk', sans-serif;
-  font-weight: 500;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: background-color 0.2s ease;
-}
-
-.faq-question:hover {
-  background-color: rgba(255, 255, 255, 0.03);
-}
-
-.faq-icon {
-  font-size: 1.25rem;
-  color: var(--accent);
-  font-weight: 300;
-  transition: transform 0.25s ease;
-}
-
-.faq-answer {
-  padding: 0 1.75rem 1.5rem 1.75rem;
-  color: #94a3b8;
-  font-size: 0.95rem;
-  line-height: 1.7;
-  display: none;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
-}
-
-.faq-item.active .faq-answer {
-  display: block;
-  padding-top: 1.25rem;
-  color: #cbd5e1;
+  margin-bottom: 3rem;
+  color: #ffffff !important;
 }
