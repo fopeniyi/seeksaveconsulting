@@ -939,3 +939,92 @@ header nav a.active {
   margin-bottom: 3rem;
   color: #ffffff !important;
 }
+
+
+/* ==========================================================================
+   Meet Our Team Section (About Us)
+   ========================================================================== */
+.team-section {
+  max-width: 1300px;
+  margin: 0 auto 6rem auto;
+  padding: 0 2rem;
+}
+
+.team-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.team-header h2 {
+  font-family: 'Spectral', serif;
+  font-size: 2.75rem;
+  font-weight: 400;
+  color: var(--text);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  align-items: start;
+}
+
+.team-card {
+  background-color: var(--surface);
+  border: 2px solid #e07a5f; /* Warm border matching your screenshot framing */
+  border-radius: 12px;
+  padding: 3rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.team-card h3 {
+  font-family: 'Spectral', serif;
+  font-size: 1.5rem;
+  text-align: center;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.team-role {
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text);
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.team-card p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+}
+
+.linkedin-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #0a66c2;
+  color: #ffffff;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  transition: opacity 0.2s ease;
+}
+
+.linkedin-btn:hover {
+  opacity: 0.85;
+}
+
+@media (max-width: 900px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+}
