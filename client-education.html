@@ -133,7 +133,7 @@
           <div class="faq-item active">
             <button class="faq-question">
               <span>How are your fees structured?</span>
-              <span class="faq-icon">−</span>
+              <span class="faq-icon"></span>
             </button>
             <div class="faq-answer">
               We charge a low, transparent percentage of assets under management.
@@ -143,7 +143,7 @@
           <div class="faq-item">
             <button class="faq-question">
               <span>Where are my assets held?</span>
-              <span class="faq-icon">+</span>
+              <span class="faq-icon"></span>
             </button>
             <div class="faq-answer">
               We use custodians such as Schwab or Fidelity to safeguard your investments.
@@ -153,7 +153,7 @@
           <div class="faq-item">
             <button class="faq-question">
               <span>What does a financial plan include?</span>
-              <span class="faq-icon">+</span>
+              <span class="faq-icon"></span>
             </button>
             <div class="faq-answer">
               Everything from budgeting to retirement and estate planning.
@@ -163,29 +163,6 @@
         </div>
       </div>
     </section>
-
-    <!-- FAQ Accordion Toggle Script -->
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        const faqItems = document.querySelectorAll('.faq-item');
-        faqItems.forEach(item => {
-          const btn = item.querySelector('.faq-question');
-          btn.addEventListener('click', () => {
-            const isOpen = item.classList.contains('active');
-            faqItems.forEach(i => {
-              i.classList.remove('active');
-              const icon = i.querySelector('.faq-icon');
-              if (icon) icon.textContent = '+';
-            });
-            if (!isOpen) {
-              item.classList.add('active');
-              const icon = item.querySelector('.faq-icon');
-              if (icon) icon.textContent = '−';
-            }
-          });
-        });
-      });
-    </script>
 
   </main>
 </div>
