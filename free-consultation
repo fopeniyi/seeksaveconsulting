@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Schedule a Free Consultation — SeekSave Investments</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;600&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrap">
+  <!-- Header / Navigation -->
+  <header>
+    <a class="logo" href="index.html">
+      <img src="f20ca648-1de9-4590-8b15-9d2f7f2d26ae-Photoroom.png" alt="SeekSave Investments" style="height: 50px; width: auto; vertical-align: middle;">
+    </a>
+    <nav aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="why-choose-us.html">Why Choose Us</a>
+      <a href="approach.html">Approach</a>
+      <a href="our-services.html">Our Services</a>
+      <a href="client-education.html">Client Education</a>
+      <a href="client-engagement.html">Client Engagement Form</a>
+      <a href="about-us.html">About Us</a>
+      <a href="real-estate.html">Real Estate Investments</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Page Header Hero Block -->
+    <section class="page-hero-section" style="background-image: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.85)), url('about-us.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; padding: 6rem 2rem; border-radius: 12px; margin-bottom: 3.5rem !important; text-align: center; color: #ffffff;">
+      <h1 style="font-family: 'Spectral', serif; font-size: 3.5rem; font-weight: 400; line-height: 1.15; margin: 0; color: #ffffff;">
+        Schedule a Free Consultation
+      </h1>
+    </section>
+
+    <!-- Consultation Form Section -->
+    <section style="max-width: 1150px; margin: 0 auto 6rem auto; padding: 0 1rem;">
+      <div class="contact-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 3rem; align-items: start;">
+        
+        <!-- Left Column: Info -->
+        <div>
+          <span class="section-eyebrow" style="color: var(--accent);">Complimentary Discovery Call</span>
+          <h2 style="font-family: 'Spectral', serif; font-size: 2.25rem; color: var(--text); margin: 0.5rem 0 1.25rem 0;">Start a conversation about your financial goals.</h2>
+          <p style="color: var(--muted); line-height: 1.7; margin-bottom: 1.5rem;">
+            Share a few details about where you are today and what you would like to accomplish with your 401(k), IRA, pension, brokerage accounts, or retirement plan. Submitting the form will prepare an email to <strong>info@seeksaveinvestments.com</strong>.
+          </p>
+
+          <ul style="list-style: none; padding: 0; margin: 0 0 2rem 0; display: flex; flex-direction: column; gap: 0.75rem;">
+            <li style="position: relative; padding-left: 1.75rem; color: var(--muted); font-size: 0.95rem;">
+              <span style="position: absolute; left: 0; color: #dc2626; font-weight: bold;">✔</span> No obligation or high-pressure sales pitch
+            </li>
+            <li style="position: relative; padding-left: 1.75rem; color: var(--muted); font-size: 0.95rem;">
+              <span style="position: absolute; left: 0; color: #dc2626; font-weight: bold;">✔</span> Personalized review of your objectives and timeline
+            </li>
+            <li style="position: relative; padding-left: 1.75rem; color: var(--muted); font-size: 0.95rem;">
+              <span style="position: absolute; left: 0; color: #dc2626; font-weight: bold;">✔</span> Serving clients nationwide from Fort Worth, Texas
+            </li>
+          </ul>
+
+          <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 1.5rem; color: var(--muted); font-size: 0.95rem; line-height: 1.7;">
+            <strong style="color: var(--text); display: block; margin-bottom: 0.35rem;">Prefer to reach out directly?</strong>
+            Email: <a href="mailto:info@seeksaveinvestments.com" style="color: var(--accent);">info@seeksaveinvestments.com</a><br>
+            Phone: (713) 823-4658
+          </div>
+        </div>
+
+        <!-- Right Column: Form -->
+        <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 2.5rem;">
+          <form id="consultation-form" onsubmit="sendConsultationEmail(event);" style="display: flex; flex-direction: column; gap: 1.25rem;">
+            
+            <div>
+              <label for="full-name" style="display: block; font-weight: 500; color: var(--text); margin-bottom: 0.4rem;">Full Name *</label>
+              <input id="full-name" name="full-name" type="text" autocomplete="name" required placeholder="Your full name" style="width: 100%; padding: 0.75rem 0.9rem; border: 1px solid var(--border); border-radius: 6px; background: #ffffff; color: #0f172a; font-family: inherit; box-sizing: border-box;">
+            </div>
+
+            <div>
+              <label for="email" style="display: block; font-weight: 500; color: var(--text); margin-bottom: 0.4rem;">Email Address *</label>
+              <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com" style="width: 100%; padding: 0.75rem 0.9rem; border: 1px solid var(--border); border-radius: 6px; background: #ffffff; color: #0f172a; font-family: inherit; box-sizing: border-box;">
+            </div>
+
+            <div>
+              <label for="phone" style="display: block; font-weight: 500; color: var(--text); margin-bottom: 0.4rem;">Phone Number</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="(713) 555-0199" style="width: 100%; padding: 0.75rem 0.9rem; border: 1px solid var(--border); border-radius: 6px; background: #ffffff; color: #0f172a; font-family: inherit; box-sizing: border-box;">
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem;">
+              <div>
+                <label for="preferred-date" style="display: block; font-weight: 500; color: var(--text); margin-bottom: 0.4rem;">Preferred Date</label>
+                <input id="preferred-date" name="preferred-date" type="date" style="width: 100%; padding: 0.75rem 0.9rem; border: 1px solid var(--border); border-radius: 6px; background: #ffffff; color: #0f172a; font-family: inherit; box-sizing: border-box;">
+              </div>
+
+              <div>
+                <label for="preferred-time" style="display: block; font-weight: 500; color: var(--text); margin-bottom: 0.4rem;">Preferred Time (CT)</label>
+                <select id="preferred-time" name="preferred-time" style="width: 100%; padding: 0.75rem 0.9rem; border: 1px solid var(--border); border-radius: 6px; background: #ffffff; color: #0f172a; font-family: inherit; box-sizing: border-box;">
+                  <option value="Morning (9:00 AM – 12:00 PM)">Morning (9:00 AM – 12:00 PM)</option>
+                  <option value="Afternoon (12:00 PM – 4:00 PM)">Afternoon (12:00 PM – 4:00 PM)</option>
+                  <option value="Late Afternoon (4:00 PM – 6:00 PM)">Late Afternoon (4:00 PM – 6:00 PM)</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label for="topic" style="display: block; font-weight: 500; color: var(--text); margin-bottom: 0.4rem;">Primary Focus</label>
+              <select id="topic" name="topic" style="width: 100%; padding: 0.75rem 0.9rem; border: 1px solid var(--border); border-radius: 6px; background: #ffffff; color: #0f172a; font-family: inherit; box-sizing: border-box;">
+                <option value="401(k) / IRA / Retirement Planning">401(k) / IRA / Retirement Planning</option>
+                <option value="Wealth & Investment Management">Wealth & Investment Management</option>
+                <option value="Financial Planning & Estate Strategy">Financial Planning & Estate Strategy</option>
+                <option value="Real Estate & Portfolio Diversification">Real Estate & Portfolio Diversification</option>
+                <option value="General Inquiry">General Inquiry</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="notes" style="display: block; font-weight: 500; color: var(--text); margin-bottom: 0.4rem;">What would you like to discuss?</label>
+              <textarea id="notes" name="notes" rows="4" placeholder="Tell us briefly about your goals or questions..." style="width: 100%; padding: 0.75rem 0.9rem; border: 1px solid var(--border); border-radius: 6px; background: #ffffff; color: #0f172a; font-family: inherit; resize: vertical; box-sizing: border-box;"></textarea>
+            </div>
+
+            <button type="submit" class="btn" style="cursor: pointer; width: 100%;">Request Free Consultation</button>
+
+            <div id="consultation-status" role="status" style="display: none; padding: 0.9rem 1rem; border-radius: 6px; background: rgba(15, 23, 42, 0.06); color: var(--text); font-size: 0.95rem; line-height: 1.5;">
+              Your email app should now be open with your consultation request addressed to <strong>info@seeksaveinvestments.com</strong>. If it didn't open automatically, you can email us directly at <a href="mailto:info@seeksaveinvestments.com" style="color: var(--accent);">info@seeksaveinvestments.com</a>.
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </section>
+  </main>
+</div>
+
+<!-- Footer Section -->
+<footer class="site-footer">
+  <div class="footer-container">
+    <!-- Top Row: Logo & YouTube Social Icon -->
+    <div class="footer-top-row">
+      <div class="footer-logo">
+        <a href="index.html" class="logo">
+          <img src="f20ca648-1de9-4590-8b15-9d2f7f2d26ae-Photoroom.png" alt="SeekSave Investments" style="height: 50px; width: auto; vertical-align: middle;">
+        </a>
+      </div>
+      <div class="footer-social">
+        <a href="https://www.youtube.com/@SeekSaveInvestments" target="_blank" aria-label="YouTube" class="social-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <hr class="footer-divider">
+
+    <!-- Columns Row -->
+    <div class="footer-grid">
+      <!-- Column 1: Quick Links (Split into 2 Sub-columns) -->
+      <div class="footer-col quick-links-col">
+        <h4>Quick Links</h4>
+        <div class="links-subgrid">
+          <ul class="footer-links">
+            <li><a href="index.html">› Home</a></li>
+            <li><a href="about-us.html">› About Us</a></li>
+            <li><a href="our-services.html">› Our Services</a></li>
+            <li><a href="client-education.html">› Client Education</a></li>
+          </ul>
+          <ul class="footer-links">
+            <li><a href="contact.html">› Contact Us</a></li>
+            <li><a href="why-choose-us.html">› Why Choose us</a></li>
+            <li><a href="privacy.html">› Privacy Policy</a></li>
+            <li><a href="terms.html">› Terms & Conditions</a></li>
+            <li><a href="disclaimer.html">› Disclaimer</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Column 2: Contact Info -->
+      <div class="footer-col">
+        <h4>Contact Info</h4>
+        <ul class="footer-contact-list">
+          <li>
+            <span class="contact-badge location-badge">📍</span>
+            <span>Fort Worth, Texas | Serving clients nationwide</span>
+          </li>
+          <li>
+            <span class="contact-badge phone-badge">📞</span>
+            <span>Phone: (713) 823-4658</span>
+          </li>
+          <li>
+            <span class="contact-badge email-badge">✉</span>
+            <span>Email: info@seeksaveinvestments.com</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Newsletter Card -->
+  <div class="newsletter-card-wrapper">
+    <div class="newsletter-card">
+      <div class="newsletter-icon-title">
+        <div class="envelope-icon">✉</div>
+        <div>
+          <h3>Subscribe Newsletter</h3>
+          <p>Subscribe Your Email Get New updates and news</p>
+        </div>
+      </div>
+      <form class="newsletter-form" onsubmit="event.preventDefault();">
+        <input type="email" placeholder="Email" required>
+        <button type="submit" class="subscribe-btn">
+          <span>✉</span> Subscribe
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Copyright Bar -->
+  <div class="footer-bottom-bar">
+    <p>© 2026 SeekSave Investments, LLC - All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script>
+function sendConsultationEmail(event) {
+  event.preventDefault();
+  var name = document.getElementById('full-name').value.trim();
+  var email = document.getElementById('email').value.trim();
+  var phone = document.getElementById('phone').value.trim() || 'Not provided';
+  var date = document.getElementById('preferred-date').value || 'Flexible';
+  var time = document.getElementById('preferred-time').value;
+  var topic = document.getElementById('topic').value;
+  var notes = document.getElementById('notes').value.trim() || 'None';
+
+  if (!name || !email || email.indexOf('@') < 1) {
+    return;
+  }
+
+  var subject = encodeURIComponent('Free Consultation Request — ' + name);
+  var body = encodeURIComponent(
+    'Name: ' + name + '\n' +
+    'Email: ' + email + '\n' +
+    'Phone: ' + phone + '\n' +
+    'Preferred Date: ' + date + '\n' +
+    'Preferred Time (CT): ' + time + '\n' +
+    'Primary Focus: ' + topic + '\n\n' +
+    'Notes:\n' + notes
+  );
+
+  window.location.href = 'mailto:info@seeksaveinvestments.com?subject=' + subject + '&body=' + body;
+  document.getElementById('consultation-status').style.display = 'block';
+}
+</script>
+
+</body>
+</html>
